@@ -6,9 +6,9 @@ TARGET = Plugin.dll
 
 DEST = ../Assets/
 
-SRCS = Plugin.c
+SRCS = Plugin.cc
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cc=.o)
 
 LIBS = -Wl,--subsystem,windows -static -ld3d11
 
@@ -17,10 +17,10 @@ LIBS = -Wl,--subsystem,windows -static -ld3d11
 #
 
 TOOLCHAIN = x86_64-w64-mingw32
-CC = $(TOOLCHAIN)-gcc-posix
+CC = $(TOOLCHAIN)-g++-posix
 STRIP = $(TOOLCHAIN)-strip
 
-CC_FLAGS = -O2 -I. -std=c11 -Wall
+CC_FLAGS = -O2 -I. -std=c++17 -Wall
 
 LD_FLAGS = -shared
 
@@ -40,5 +40,5 @@ $(TARGET): $(OBJS)
 	$(CC) $(LD_FLAGS) -o $@ $^ $(LIBS)
 	$(STRIP) $@
 
-%.o: %.c
+%.o: %.cc
 	$(CC) $(CC_FLAGS) -c -o $@ $<
