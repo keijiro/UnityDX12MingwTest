@@ -54,6 +54,7 @@ sealed class Test : MonoBehaviour
 
         // Wait for the next frame.
         yield return null;
+        yield return null;
 
         // Create an external texture.
         _texture = Texture2D.CreateExternalTexture
