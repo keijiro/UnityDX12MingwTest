@@ -10,7 +10,7 @@ SRCS = Plugin.cc
 
 OBJS = $(SRCS:.cc=.o)
 
-LIBS = -Wl,--subsystem,windows -static -ld3d11
+LIBS = -Wl,--subsystem,windows -static -ld3d12
 
 #
 # Compiler/linker options
