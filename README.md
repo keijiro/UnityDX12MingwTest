@@ -1,6 +1,8 @@
 UnityDX12MingwTest
 ==================
 
+![screenshot](https://user-images.githubusercontent.com/343936/122892220-2bdb5080-d380-11eb-91d2-a7d542ccf7ae.png)
+
 **UnityDX12MingwTest** is a Unity sample project that shows how to build a
 low-level native plugin for the DirectX 12 (D3D12) mode using the [Mingw-w64]
 GCC toolchain. It means that now you can build DX12 plugins on [WSL] without
